@@ -81,7 +81,11 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if (str1.length === str2.length) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function menosQueNoventa(num) {
@@ -185,13 +189,16 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+  var positivo = "Es positivo"
+  var negativo = "Es negativo"
+
   if (numero > 0) {
-    return console.log('Es positivo')
+    return positivo;
      
   } if (numero == 0) {
     return false;
    } else {
-     return console.log('Es negativo');
+     return negativo;
    }
   
 }
@@ -225,7 +232,7 @@ function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
   var area;
-  area = ancho * altura;
+  area = ancho * alto;
   return area;
 }
 
@@ -233,14 +240,19 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
+  var perimetro;
+  perimetro = lado * 4;
+  return perimetro;
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
+  var area;
+  area = base * altura ;
+  area = area / 2;
+  return area;
 }
 
 
