@@ -48,7 +48,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  var resultado_r = y - x;
+  var resultado_r = x - y;
   return resultado_r; 
 }
 
@@ -117,13 +117,22 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-   
+   if (num %= 2) {
+    return true;
+   } else {
+    return false;
+   }
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (num %! 2) {
+    return true;
+  } else {
+    return false;
+  }
   
 }
 
@@ -131,37 +140,44 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  
+  num = Math.pow(num, 2)
+  return num;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
+  num = Math.pow(num, 3)
+  return num;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  
+  num = Math.pow(num, exponent)
+  return num;
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  num = Math.round(num)
+  return num;
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  num = Math.ceil(num)
+  return num;
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  var numero;
+  numero = Math.random(numero)
+  return numero;
 }
 
 function esPositivo(numero) {
