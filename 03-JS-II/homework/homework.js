@@ -109,7 +109,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  
+  return numero % 1 === 0;
 }
 
 function fizzBuzz(numero) {
@@ -117,7 +117,15 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (numero % 3 === 0) {
+    return 'fizz';
+  } else if (numero % 5 === 0) {
+    return 'buzz';
+  }
+  return numero;
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -145,6 +153,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if (numero < 2) return false;
+  if (numero === 2) return true;
+   for (var i = 2; i < numero ; i++) {
+    if (numero % i === 0) {
+      return false;
+    }
+  }
+  return true;   
 }
 
 function esVerdadero(valor){
@@ -164,7 +180,11 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+    var tabla = [];                 //Array sin valores dentro
+    for (var i = 0; i < 11; i++) {  //mientras que i sea menor a 11 (porque la tabla 6 desde el 0 hasta el 60 son 10 puestos) se va a repetir
+      tabla.push(6 * i)             //Como "i" vale 0 seria, 6*0, 6*1, 6*2 ... hasta 6*10 y ahi terminaria. Push coloca datos en el array.
+    }
+    return tabla;                   //Retornamos el valor de tabla para finalizar el ejercicio.
 }
 
 function tieneTresDigitos(numero){
